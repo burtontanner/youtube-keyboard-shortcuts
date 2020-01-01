@@ -65,12 +65,12 @@ globalShortcut.unregisterAll();
 
 
 //Register keyboard events
-globalShortcut.register('MediaPlayPause', function() { 
+globalShortcut.register('F8', function() { 
 	console.log('MediaPlayPause');
 	simulate(document.getElementsByClassName("ytp-button ytp-play-button")[0], "click");
 });
 
-globalShortcut.register('MediaPreviousTrack', function() {
+globalShortcut.register('F7', function() {
 	var prevItem = document.getElementsByClassName("ytp-button ytp-prev-button");
 	console.log('MediaPreviousTrack');
 	if(prevItem.length > 0) {
@@ -80,7 +80,7 @@ globalShortcut.register('MediaPreviousTrack', function() {
 	}
 });
 
-globalShortcut.register('MediaNextTrack', function() {
+globalShortcut.register('F9', function() {
   	console.log('MediaNextTrack');
   	var nextItem = document.getElementsByClassName("ytp-button ytp-next-button");
 	if(nextItem.length > 0) {
