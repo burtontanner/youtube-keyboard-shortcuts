@@ -89,3 +89,28 @@ globalShortcut.register('F9', function() {
 		alert('Nothing next...');
 	}
 });
+//Register keyboard events
+globalShortcut.register('MediaPlayPause', function() { 
+	console.log('MediaPlayPause');
+	simulate(document.getElementsByClassName("ytp-button ytp-play-button")[0], "click");
+});
+
+globalShortcut.register('MediaPreviousTrack', function() {
+	var prevItem = document.getElementsByClassName("ytp-button ytp-prev-button");
+	console.log('MediaPreviousTrack');
+	if(prevItem.length > 0) {
+		simulate(prevItem[0], "click");
+	} else {
+		alert('Nothing back...');
+	}
+});
+
+globalShortcut.register('MediaNextTrack', function() {
+  	console.log('MediaNextTrack');
+  	var nextItem = document.getElementsByClassName("ytp-button ytp-next-button");
+	if(nextItem.length > 0) {
+		simulate(nextItem[0], "click");
+	} else {
+		alert('Nothing next...');
+	}
+});
