@@ -80,8 +80,6 @@ function previous(){
 	console.log('MediaPreviousTrack');
 	if(prevItem.length > 0) {
 		simulate(prevItem[0], "click");
-	} else {
-		alert('Nothing back...');
 	}
 		document.getElementsByClassName('previous-button')[0].click();
 }
@@ -97,8 +95,6 @@ function next(){
   	var nextItem = document.getElementsByClassName("ytp-button ytp-next-button");
 	if(nextItem.length > 0) {
 		simulate(nextItem[0], "click");
-	} else {
-		alert('Nothing next...');
-	}
+	} 
 	document.getElementsByClassName('next-button')[0].click();
 }
