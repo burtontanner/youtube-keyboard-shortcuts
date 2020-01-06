@@ -16,12 +16,11 @@ Built with a great deal of help from https://github.com/jiahaog/nativefier
 With [Node.js](https://nodejs.org/) installed,
 
 ```bash
-
 npm install nativefier -g
-
-git clone https://github.com/adyz/youtube-keyboard-shortcuts 
-
-nativefier http://youtube.com --inject ./index.js ~/Desktop --overwrite
+cd /Applications
+git clone https://github.com/burtontanner/youtube-keyboard-shortcuts 
+nativefier http://music.youtube.com --inject youtube-keyboard-shortcuts/index.js --overwrite
+rm -rf youtube-keyboard-shortcuts 
 
 ```
 where `index.js` is the file you you will find on this repo.
