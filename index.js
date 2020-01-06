@@ -31,7 +31,7 @@ function simulate(element, eventName) {
 		element.fireEvent('on' + eventName, oEvent);
 	    }
 	    return element;
-	}catch(e){console.error(e));
+	}catch(e){console.error(e);}
 }
 function extend(destination, source) {
     for (var property in source)
