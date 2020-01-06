@@ -71,7 +71,7 @@ globalShortcut.register('MediaNextTrack', next);
 globalShortcut.register('MediaPlayPause', playPause);
 globalShortcut.register('F8', playPause);
 globalShortcut.register('MediaPreviousTrack',previous);
-globalShortcut.register('F7',previous});
+globalShortcut.register('F7',previous);
 
 function previous(){
 	var prevItem = document.getElementsByClassName("ytp-button ytp-prev-button");
