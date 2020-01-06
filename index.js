@@ -84,7 +84,7 @@ function previous(){
 		document.getElementsByClassName('previous-button')[0].click();
 }
 
-funciton playPause(){
+function playPause(){
 	console.log('MediaPlayPause');
 	simulate(document.getElementsByClassName("ytp-button ytp-play-button")[0], "click");
 	document.getElementsByClassName('play-pause-button')[0].click();
