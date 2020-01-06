@@ -65,12 +65,15 @@ globalShortcut.unregisterAll();
 
 
 //Register keyboard events
-globalShortcut.register('F8', function() { 
-	console.log('MediaPlayPause');
-	simulate(document.getElementsByClassName("ytp-button ytp-play-button")[0], "click");
-});
 
-globalShortcut.register('F7', function() {
+globalShortcut.register('F9', next);
+globalShortcut.register('MediaNextTrack', next);
+globalShortcut.register('MediaPlayPause', playPause);
+globalShortcut.register('F8', playPause);
+globalShortcut.register('MediaPreviousTrack',previous);
+globalShortcut.register('F7',previous});
+
+function previous(){
 	var prevItem = document.getElementsByClassName("ytp-button ytp-prev-button");
 	console.log('MediaPreviousTrack');
 	if(prevItem.length > 0) {
@@ -78,39 +81,22 @@ globalShortcut.register('F7', function() {
 	} else {
 		alert('Nothing back...');
 	}
-});
+		document.getElementsByClassName('previous-button')[0].click();
+}
 
-globalShortcut.register('F9', function() {
-  	console.log('MediaNextTrack');
-  	var nextItem = document.getElementsByClassName("ytp-button ytp-next-button");
-	if(nextItem.length > 0) {
-		simulate(nextItem[0], "click");
-	} else {
-		alert('Nothing next...');
-	}
-});
-//Register keyboard events
-globalShortcut.register('MediaPlayPause', function() { 
+funciton playPause(){
 	console.log('MediaPlayPause');
 	simulate(document.getElementsByClassName("ytp-button ytp-play-button")[0], "click");
-});
+	document.getElementsByClassName('play-pause-button')[0].click();
+}
 
-globalShortcut.register('MediaPreviousTrack', function() {
-	var prevItem = document.getElementsByClassName("ytp-button ytp-prev-button");
-	console.log('MediaPreviousTrack');
-	if(prevItem.length > 0) {
-		simulate(prevItem[0], "click");
-	} else {
-		alert('Nothing back...');
-	}
-});
-
-globalShortcut.register('MediaNextTrack', function() {
-  	console.log('MediaNextTrack');
+function next(){
+	console.log('MediaNextTrack');
   	var nextItem = document.getElementsByClassName("ytp-button ytp-next-button");
 	if(nextItem.length > 0) {
 		simulate(nextItem[0], "click");
 	} else {
 		alert('Nothing next...');
 	}
-});
+	document.getElementsByClassName('next-button')[0].click();
+}
