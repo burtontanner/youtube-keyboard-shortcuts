@@ -19,7 +19,7 @@ With [Node.js](https://nodejs.org/) installed,
 npm install nativefier -g
 cd /Applications
 git clone https://github.com/burtontanner/youtube-keyboard-shortcuts 
-nativefier http://music.youtube.com --inject youtube-keyboard-shortcuts/index.js --overwrite
+nativefier http://music.youtube.com --inject youtube-keyboard-shortcuts/index.js -u "Mozilla/5.0 (Windows NT 6.1; WOW64; rv:54.0) Gecko/20100101 Firefox/73.0" --internal-urls ".*?"
 rm -rf youtube-keyboard-shortcuts 
 
 ```
